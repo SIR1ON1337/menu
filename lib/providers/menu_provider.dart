@@ -11,7 +11,7 @@ final categoriesProvider = Provider<List<MenuCategory>>((ref) => [
   MenuCategory(id: 'salads', name: 'Салаты', emoji: ''),
   MenuCategory(id: 'soups', name: 'Первые блюда', emoji: ''),
   MenuCategory(id: 'main_meat', name: 'Горячие блюда (Мясо и Птица)', emoji: ''),
-  MenuCategory(id: 'saj', name: 'Салд', emoji: ''),
+  MenuCategory(id: 'saj', name: 'Садж', emoji: ''),
   MenuCategory(id: 'steak_fish', name: 'Стейки и Рыба', emoji: ''),
   MenuCategory(id: 'sides', name: 'Гарниры', emoji: ''),
   MenuCategory(id: 'drinks', name: 'Напитки', emoji: ''),
@@ -64,10 +64,10 @@ final menuItemsProvider = Provider<List<MenuItem>>((ref) => [
   MenuItem(id: 'meat_16', categoryId: 'main_meat', name: 'Курзе с картошкой', description: '*', price: 400, imageUrl: 'https://img.iamcook.ru/2022/upl/recipes/zen/u-67dbcc898e735f60d41c0728eff1124e.JPG'),
 
   // 5. Садже
-  MenuItem(id: 'saj_1', categoryId: 'saj', name: 'Салд из говядины', description: '', price: 1600, imageUrl: 'https://th.bing.com/th/id/OIP.zDfPvKRe7g-eMRdQThrdCAHaE8?w=268&h=180&c=7&r=0&o=7&pid=1.7&rm=3'),
-  MenuItem(id: 'saj_2', categoryId: 'saj', name: 'Салд из курицы', description: '', price: 1400, imageUrl: 'https://th.bing.com/th/id/OIP.mw1eMC9ugicB2GH4PyCkJgHaE8?w=248&h=180&c=7&r=0&o=7&pid=1.7&rm=3'),
-  MenuItem(id: 'saj_3', categoryId: 'saj', name: 'Салд из семги', description: '', price: 1900, imageUrl: 'https://th.bing.com/th/id/OIP.WJ436CZpaGjFGPXdWgbNcgHaEO?w=233&h=180&c=7&r=0&o=7&pid=1.7&rm=3'),
-  MenuItem(id: 'saj_4', categoryId: 'saj', name: 'Салд ассорти', description: '', price: 1800, imageUrl: 'https://th.bing.com/th/id/OIP.j7NVbIpqg2KpRVcpWq2FoAHaEO?w=330&h=188&c=7&r=0&o=7&pid=1.7&rm=3'),
+  MenuItem(id: 'saj_1', categoryId: 'saj', name: 'Садж из говядины', description: '', price: 1600, imageUrl: 'https://th.bing.com/th/id/OIP.zDfPvKRe7g-eMRdQThrdCAHaE8?w=268&h=180&c=7&r=0&o=7&pid=1.7&rm=3'),
+  MenuItem(id: 'saj_2', categoryId: 'saj', name: 'Садж из курицы', description: '', price: 1400, imageUrl: 'https://th.bing.com/th/id/OIP.mw1eMC9ugicB2GH4PyCkJgHaE8?w=248&h=180&c=7&r=0&o=7&pid=1.7&rm=3'),
+  MenuItem(id: 'saj_3', categoryId: 'saj', name: 'Садж из семги', description: '', price: 1900, imageUrl: 'https://th.bing.com/th/id/OIP.WJ436CZpaGjFGPXdWgbNcgHaEO?w=233&h=180&c=7&r=0&o=7&pid=1.7&rm=3'),
+  MenuItem(id: 'saj_4', categoryId: 'saj', name: 'Садж ассорти', description: '', price: 1800, imageUrl: 'https://th.bing.com/th/id/OIP.j7NVbIpqg2KpRVcpWq2FoAHaEO?w=330&h=188&c=7&r=0&o=7&pid=1.7&rm=3'),
 
   // 6. Стейки и Рыба
   MenuItem(id: 'steak_1', categoryId: 'steak_fish', name: 'Стейк Томагавк', description: '', price: 2200, imageUrl: 'https://th.bing.com/th/id/OIP._UDN2F4nSmCUpu4PNHwazAHaEc?w=282&h=180&c=7&r=0&o=7&pid=1.7&rm=3'),
