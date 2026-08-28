@@ -105,9 +105,28 @@ class CartView extends ConsumerWidget {
                               ),
                               IconButton(
                                 iconSize: 18,
-                                onPressed: () => ref
-                                    .read(cartProvider.notifier)
-                                    .addItem(cartItem.item),
+                                onPressed: () {
+                                  ref.read(cartProvider.notifier).addItem(cartItem.item);
+                                  ScaffoldMessenger.of(context).clearSnackBars();
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                        '${cartItem.item.name.toUpperCase()} +1',
+                                        style: const TextStyle(
+                                          color: SkyTheme.primaryGold,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      duration: const Duration(milliseconds: 500),
+                                      backgroundColor: SkyTheme.surfaceDark,
+                                      behavior: SnackBarBehavior.floating,
+                                      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                    ),
+                                  );
+                                },
                                 icon: const Icon(Icons.add, color: SkyTheme.primaryGold),
                               ),
                             ],

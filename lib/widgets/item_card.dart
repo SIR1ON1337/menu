@@ -104,16 +104,28 @@ class ItemCard extends ConsumerWidget {
                         ),
                         onPressed: () {
                           ref.read(cartProvider.notifier).addItem(item);
+                          ScaffoldMessenger.of(context).clearSnackBars();
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
-                              content: Text('${item.name} добавлен в корзину'),
-                              duration: const Duration(seconds: 1),
-                              backgroundColor: SkyTheme.surfaceDark,
+                              content: Text(
+                                '${item.name.toUpperCase()} ДОБАВЛЕН',
+                                style: const TextStyle(
+                                  color: SkyTheme.primaryGold,
+                                  fontWeight: FontWeight.w900,
+                                  letterSpacing: 1,
+                                ),
+                              ),
+                              duration: const Duration(milliseconds: 800),
+                              backgroundColor: SkyTheme.surfaceDark.withOpacity(0.98),
                               behavior: SnackBarBehavior.floating,
                               margin: EdgeInsets.only(
-                                bottom: size.height * 0.1,
-                                left: 20,
-                                right: 20,
+                                bottom: size.height * 0.12,
+                                left: size.width * 0.1,
+                                right: size.width * 0.1,
+                              ),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                side: const BorderSide(color: Colors.white10),
                               ),
                             ),
                           );
