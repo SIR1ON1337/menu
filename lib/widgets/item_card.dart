@@ -9,6 +9,16 @@ class ItemCard extends ConsumerWidget {
   final MenuItem item;
   const ItemCard({super.key, required this.item});
 
+  ImageProvider _getImageProvider(String? url) {
+    if (url == null || url.isEmpty) {
+      return const NetworkImage('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1000');
+    }
+    if (url.startsWith('http') || url.startsWith('https')) {
+      return NetworkImage(url);
+    }
+    return AssetImage(url);
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final size = MediaQuery.of(context).size;
@@ -40,11 +50,7 @@ class ItemCard extends ConsumerWidget {
                   decoration: BoxDecoration(
                     color: Colors.white.withOpacity(0.05),
                     image: DecorationImage(
-                      image: NetworkImage(
-                        (item.imageUrl != null && item.imageUrl!.isNotEmpty)
-                            ? item.imageUrl!
-                            : 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1000',
-                      ),
+                      image: _getImageProvider(item.imageUrl),
                       fit: BoxFit.cover,
                     ),
                   ),
